@@ -2,32 +2,270 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+    --transparent-background: 0 0% 80% 0.15;
+    --more-transparent-background: 0 0% 80% 0.08;
+    --gradient-main-loop: linear-gradient(
+      90deg,
+      #b721ff,
+      #6625ff 35%,
+      #257cff 50%,
+      #6625ff 65%,
+      #b721ff
+    );
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+.Images_hollowplanets__NOFlf {
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: auto;
+  left: 0;
+  opacity: 0.8;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+.Images_bigplanet__LgSiS {
+  animation: Images_planet-move__6TxmG 120s linear infinite;
+  filter: hue-rotate(-40deg) brightness(0.9);
+  height: 700px;
+  left: 20px;
+  top: -400px;
+  width: 700px;
+}
+.Images_bigplanet__LgSiS,
+.Images_smallplanet__JD3DP {
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 100%;
+  opacity: 0.8;
+  position: absolute;
+  z-index: -1;
+}
+.Images_smallplanet__JD3DP {
+  animation: Images_planet-move__6TxmG 40s linear infinite;
+  aspect-ratio: 1/1;
+  height: 250px;
+  right: 120px;
+  top: 400px;
+  width: 250px;
+}
+@media screen and (max-width: 1200px) {
+  .Images_smallplanet__JD3DP {
+    top: 400px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .Images_bigplanet__LgSiS {
+    display: none;
+  }
+  .Images_smallplanet__JD3DP {
+    height: 350px;
+    top: 300px;
+    width: 350px;
+  }
+  .Images_hollowplanets__NOFlf {
+    display: none;
+  }
+}
+.welcomeText {
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  animation: Hero_gradient-animation__0sEHD 8s linear infinite;
+  background-image: var(--gradient-main-loop);
+  background-position: 0;
+  background-size: 200% 100%;
+  font-size: 3.9rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.gradient-animation {
+  animation: Hero_gradient-animation__0sEHD 3s linear infinite;
+  background-image: var(--gradient-main-loop);
+  background-size: 200% 100%;
+}
+@keyframes Skills_planet-move__3kQRq {
+  0% {
+    transform: translate3d(0, 30px, 0) rotate(0deg);
+  }
+  8.33% {
+    transform: translate3d(15px, 25px, 0) rotate(30deg);
+  }
+  16.67% {
+    transform: translate3d(25px, 15px, 0) rotate(60deg);
+  }
+  25% {
+    transform: translate3d(30px, 0, 0) rotate(90deg);
+  }
+  33.33% {
+    transform: translate3d(25px, -15px, 0) rotate(120deg);
+  }
+  41.67% {
+    transform: translate3d(15px, -25px, 0) rotate(150deg);
+  }
+  50% {
+    transform: translate3d(0, -30px, 0) rotate(180deg);
+  }
+  58.33% {
+    transform: translate3d(-15px, -25px, 0) rotate(210deg);
+  }
+  66.67% {
+    transform: translate3d(-25px, -15px, 0) rotate(240deg);
+  }
+  75% {
+    transform: translate3d(-30px, 0, 0) rotate(270deg);
+  }
+  83.33% {
+    transform: translate3d(-25px, 15px, 0) rotate(300deg);
+  }
+  91.67% {
+    transform: translate3d(-15px, 25px, 0) rotate(330deg);
+  }
+  to {
+    transform: translate3d(0, 30px, 0) rotate(1turn);
+  }
+}
+
+@keyframes Images_planet-move__6TxmG {
+  0% {
+    transform: translate3d(0, 30px, 0) rotate(0deg);
+  }
+  8.33% {
+    transform: translate3d(15px, 25px, 0) rotate(30deg);
+  }
+  16.67% {
+    transform: translate3d(25px, 15px, 0) rotate(60deg);
+  }
+  25% {
+    transform: translate3d(30px, 0, 0) rotate(90deg);
+  }
+  33.33% {
+    transform: translate3d(25px, -15px, 0) rotate(120deg);
+  }
+  41.67% {
+    transform: translate3d(15px, -25px, 0) rotate(150deg);
+  }
+  50% {
+    transform: translate3d(0, -30px, 0) rotate(180deg);
+  }
+  58.33% {
+    transform: translate3d(-15px, -25px, 0) rotate(210deg);
+  }
+  66.67% {
+    transform: translate3d(-25px, -15px, 0) rotate(240deg);
+  }
+  75% {
+    transform: translate3d(-30px, 0, 0) rotate(270deg);
+  }
+  83.33% {
+    transform: translate3d(-25px, 15px, 0) rotate(300deg);
+  }
+  91.67% {
+    transform: translate3d(-15px, 25px, 0) rotate(330deg);
+  }
+  to {
+    transform: translate3d(0, 30px, 0) rotate(1turn);
+  }
+}
+@keyframes Images_gradient-animation___80k_ {
+  0% {
+    background-position: 0;
+  }
+  to {
+    background-position: 400%;
+  }
+}
+@keyframes Images_visibility-animation__7FuXf {
+  0%,
+  to {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes Hero_gradient-animation__0sEHD {
+  0% {
+    background-position: 0;
+  }
+  to {
+    background-position: 400%;
   }
 }
