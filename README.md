@@ -1,6 +1,6 @@
 
 <p align="center">
-  <a href="" target="blank"><img src=""  alt="Nest Logo" /></a>
+  <a href="https://github.com/fariborz0015/Web3modal-nextjs-template" target="blank"><img src="https://github.com/fariborz0015/Web3modal-nextjs-template/blob/main/public/cover.png?raw=true"  alt="Nest Logo" /></a>
 </p>
 
 ### Warning: Ai Generated Readme
