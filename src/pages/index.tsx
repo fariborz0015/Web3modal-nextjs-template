@@ -1,6 +1,8 @@
 import BuyMeCoffee from "@/components/pages/index/BuyMeCoffee";
+import BuyMeCoffeeByContract from "@/components/pages/index/BuyMeCoffeeByContract";
 import WalletStatus from "@/components/pages/index/WalletStatus";
 import { Button } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import Image from "next/image";
 
@@ -51,9 +53,22 @@ export default function Home() {
         <div className="mt-4  ">
           <WalletStatus />
         </div>
-        <div className="   mt-8">
-          <BuyMeCoffee />
-        </div>
+        <Tabs defaultValue="matic" className=" mt-12">
+          <TabsList className="grid w-full grid-cols-2">
+            <TabsTrigger value="matic">MATIC</TabsTrigger>
+            <TabsTrigger value="contract">PME Contract</TabsTrigger>
+          </TabsList>
+          <TabsContent value="matic">
+            <div className="mt-4  ">
+              <BuyMeCoffee />
+            </div>
+          </TabsContent>
+          <TabsContent value="contract">
+            <div className="   mt-8">
+              <BuyMeCoffeeByContract />
+            </div>
+          </TabsContent>
+        </Tabs>
       </div>
     </main>
   );
