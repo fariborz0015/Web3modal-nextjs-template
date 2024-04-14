@@ -21,7 +21,7 @@ Jumpstart DApp development with Next.js. Easily connect wallets via Web3Modal an
 # Config  :
 - **step 1** : Clone the code base from git :
 ```bash
-git clone 
+git clone https://github.com/fariborz0015/Web3modal-nextjs-template.git
 ```
 - **step 2** : Create a new project in [Cloud Wallet connect](https://cloud.walletconnect.com) and copy Project id 
 - **step 3** : Enter Your Project ID in `.env` file :
