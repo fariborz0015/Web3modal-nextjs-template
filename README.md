@@ -1,6 +1,6 @@
 
 <p align="center">
-  <a href="https://github.com/fariborz0015/Web3modal-nextjs-template" target="blank"><img src="https://github.com/fariborz0015/Web3modal-nextjs-template/blob/main/public/cover.png?raw=true"  alt="Nest Logo" /></a>
+  <a href="https://github.com/fariborz0015/Web3modal-nextjs-template" target="blank"><img src="https://github.com/fariborz0015/Web3modal-nextjs-template/blob/main/public/cover1.png?raw=true"  alt="Nest Logo" /></a>
 </p>
 
 ### Warning: Ai Generated Readme
@@ -8,6 +8,14 @@
 # Next.js DApp Template with Web3Modal and TailwindCSS
 
 Jumpstart DApp development with Next.js. Easily connect wallets via Web3Modal and Wagmi, with UI powered by tailwindcss and shadcn. Includes a donate-me website example, enabling digital currency coffee purchases via wallet.
+# Features : 
+- Demo of chain native currency transform 
+- Demo of contract connection 
+- Demo of contract balance fetch 
+- Demo of contract coin transfer 
+- Demo of wallet connection and wallet status 
+- Demo of wallet disconnectiong 
+- Demo of transaction loading 
 
 # Used stacks :
 
@@ -21,7 +29,7 @@ Jumpstart DApp development with Next.js. Easily connect wallets via Web3Modal an
 # Config  :
 - **step 1** : Clone the code base from git :
 ```bash
-git clone 
+git clone https://github.com/fariborz0015/Web3modal-nextjs-template.git
 ```
 - **step 2** : Create a new project in [Cloud Wallet connect](https://cloud.walletconnect.com) and copy Project id 
 - **step 3** : Enter Your Project ID in `.env` file :
@@ -64,7 +72,7 @@ export const config = defaultWagmiConfig({
  npm run build  
 ```
 
-# structure : 
+# Structure : 
 
 Project files and directories structure :
 
