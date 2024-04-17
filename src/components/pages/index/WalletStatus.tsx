@@ -9,13 +9,16 @@ type Props = {};
 
 const WalletStatus = (props: Props) => {
   const { address, isConnected, chain } = useAccount();
-  const {disconnect}=useDisconnect()
+  const { disconnect } = useDisconnect();
 
-  const disConnecthandler=()=>{
-    disconnect({},{
-        onSuccess:()=> toast.success("You disconnected Successfully")
-    })
-  }
+  const disConnecthandler = () => {
+    disconnect(
+      {},
+      {
+        onSuccess: () => toast.success("You disconnected Successfully"),
+      }
+    );
+  };
 
   return (
     <Card className="bg-gray-700 bg-opacity-10 backdrop-blur">
@@ -53,9 +56,15 @@ const WalletStatus = (props: Props) => {
           </div>
 
           <div className="mt-4">
-            <Button onClick={disConnecthandler} variant="glass" className="flex gap-2 ps-2">
-                <span><Icon icon={'solar:logout-3-bold-duotone'} className="size-6"/></span>
-                <span>Disconnect</span>
+            <Button
+              onClick={disConnecthandler}
+              variant="glass"
+              className="flex gap-2 ps-2"
+            >
+              <span>
+                <Icon icon={"solar:logout-3-bold-duotone"} className="size-6" />
+              </span>
+              <span>Disconnect</span>
             </Button>
           </div>
         </div>
